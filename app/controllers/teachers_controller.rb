@@ -40,15 +40,10 @@ class TeachersController < ApplicationController
     respond_with(@teacher, :location => @teacher)
   end
 
-  # DELETE /teachers/1
-  # DELETE /teachers/1.json
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy
 
-    respond_to do |format|
-      format.html { redirect_to teachers_url }
-      format.json { head :no_content }
-    end
+    respond_with(nil, :location => teachers_path)
   end
 end

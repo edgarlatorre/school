@@ -14,6 +14,11 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem "rspec-rails", :group => [:test, :development]
 
+group :development do
+  gem 'sqlite3'
+end
+
+
 group :test do
   gem 'capybara'
   gem "guard-rspec"
