@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'sqlite3'
-
+gem 'pg', :group => [:production]
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -13,7 +12,11 @@ end
 
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem "rspec-rails", :group => [:test, :development]
+
+group :test, :development do
+  gem "rspec-rails"
+  gem 'sqlite3'
+end
 
 group :test do
   gem 'capybara'
