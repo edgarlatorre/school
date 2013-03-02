@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Student do
-  pending
+  it "should have a name" do
+    student = Student.create
+    expect(student).to have(1).error_on(:name)
+  end
 end
