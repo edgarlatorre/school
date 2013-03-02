@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe StudentsController do
-    let(:student) { mock_model(Student).as_null_object }
+  let(:student) { mock_model(Student).as_null_object }
 
   describe "GET 'index" do
     it "should be success"do 

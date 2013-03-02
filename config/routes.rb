@@ -1,4 +1,7 @@
 School::Application.routes.draw do
+  resources :teams
+
+
   resources :subjects
 
 

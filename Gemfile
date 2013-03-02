@@ -21,6 +21,7 @@ end
 
 group :test do
   gem "capybara"
+  gem 'rb-fsevent', :require => false
   gem "guard-rspec"
   gem "simplecov"
 end

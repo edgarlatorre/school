@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SubjectsController do
-      let(:subject) { mock_model(Subject).as_null_object }
+  let(:subject) { mock_model(Subject).as_null_object }
 
   describe "GET 'index" do
     it "should be success"do 
