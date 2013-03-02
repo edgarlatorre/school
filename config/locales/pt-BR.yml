@@ -1,0 +1,22 @@
+pt-BR:
+  home: "Início"
+  back: "Voltar"
+  teachers:
+    title: "Professores"
+  activerecord:
+    models:
+      teacher: "Professor"
+      student: "Aluno"
+      subject: "Matéria"
+      team: "Turma"
+
+    attributes:
+      teacher:
+        name: "Nome"
+        age: "Idade"
+      student:
+        name: "Nome"
+        age: "Idade"
+      subject:
+        name: "Nome"
+        description: "Descrição"

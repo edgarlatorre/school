@@ -15,14 +15,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Old School</a>
+          <a class="brand" href="#">Old Skull</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><%= link_to "Home", "/" %></a></li>
-              <li class="active"><%= link_to "Teacher", teachers_path %></a></li>
-              <li class="active"><%= link_to "Student", students_path %></li>
-              <li class="active"><%= link_to "Subject", subjects_path %></li>
-              <li class="active"><%= link_to "Team", teams_path %></li>
+              <li class="active"><%= link_to t("activerecord.models.teacher"), teachers_path %></a></li>
+              <li class="active"><%= link_to t("activerecord.models.student"), students_path %></li>
+              <li class="active"><%= link_to t("activerecord.models.subject"), subjects_path %></li>
+              <li class="active"><%= link_to t("activerecord.models.team"), teams_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
