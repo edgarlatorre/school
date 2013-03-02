@@ -1,8 +1,8 @@
-<h1>Listing teams</h1>
+<h1><%= t("teams.listing") %></h1>
 
 <table class="table">
   <tr>
-    <th>Name</th>
+    <th><%= t("activerecord.attributes.team.name") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @teams.each do |team| %>
   <tr>
     <td><%= team.name %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('show'), team %></td>
+    <td><%= link_to t('edit'), edit_team_path(team) %></td>
+    <td><%= link_to t('destroy'), team, method: :delete, data: { confirm: t('are-you-sure') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to t("new"), new_team_path %>

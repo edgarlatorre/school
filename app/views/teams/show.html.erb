@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t("activerecord.attributes.team.name") %>:</b>
   <%= @team.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<%= link_to t('edit'), edit_team_path(@team) %> |
+<%= link_to t('back'), teams_path %>

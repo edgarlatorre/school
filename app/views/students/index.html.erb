@@ -1,9 +1,9 @@
-<h1>Listing students</h1>
+<h1><%= t("students.listing") %></h1>
 
 <table class="table">
   <tr>
-    <th>Name</th>
-    <th>Age</th>
+    <th><%= t("activerecord.attributes.student.name") %></th>
+    <th><%= t("activerecord.attributes.student.age") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= student.name %></td>
     <td><%= student.age %></td>
-    <td><%= link_to 'Show', student %></td>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t('show'), student %></td>
+    <td><%= link_to t('edit'), edit_student_path(student) %></td>
+    <td><%= link_to t('destroy'), student, method: :delete, data: { confirm: t('are-you-sure') } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Student', new_student_path %>
+<%= link_to t('new'), new_student_path %>

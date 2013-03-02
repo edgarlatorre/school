@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t("activerecord.attributes.teacher.name")%>:</b>
   <%= @teacher.name %>
 </p>
 
 <p>
-  <b>Age:</b>
+  <b><%= t("activerecord.attributes.teacher.age")%>:</b>
   <%= @teacher.age %>
 </p>
 
 
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
+<%= link_to t('edit'), edit_teacher_path(@teacher) %> |
+<%= link_to t('back'), teachers_path %>

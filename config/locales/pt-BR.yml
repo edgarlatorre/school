@@ -1,8 +1,23 @@
 pt-BR:
   home: "Início"
   back: "Voltar"
+  show: "Exibir"
+  edit: "Editar"
+  new: "Novo"
+  destroy: "Remover"
+  are-you-sure: "Você tem certeza?"
   teachers:
     title: "Professores"
+    editing: "Editando professor"
+  students:
+    listing: "Alunos"
+    editing: "Editando aluno"
+  subjects:
+    listing: "Matérias"
+    editing: "Editando matéria"
+  teams:
+    listing: "Turmas"
+    editing: "Editando turma"
   activerecord:
     models:
       teacher: "Professor"
@@ -20,3 +35,5 @@ pt-BR:
       subject:
         name: "Nome"
         description: "Descrição"
+      team:
+        name: "Nome"
