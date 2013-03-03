@@ -25,7 +25,7 @@ class TeamsController < ApplicationController
     @team = Team.new(params[:team])
 
     if @team.save
-      flash[:notice] = 'Team was successfully created.'
+      flash[:notice] = t("teams.created")
     end
 
     respond_with(@team, :location => @team)
@@ -35,7 +35,7 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
 
     if @team.update_attributes(params[:team])
-      flash[:notice] = 'Team was successfully updated.'
+      flash[:notice] = t("teams.updated")
     end
 
     respond_with(@team, :location => @team)

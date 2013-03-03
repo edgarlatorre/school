@@ -25,7 +25,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.new(params[:subject])
 
     if @subject.save
-      flash[:notice] = 'Subject was successfully created.'
+      flash[:notice] = t("subjects.created")
     end
     respond_with(@subject, :location => @subject)
   end
@@ -34,7 +34,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
 
     if @subject.update_attributes(params[:subject])
-      flash[:notice] = 'Subject was successfully updated.'
+      flash[:notice] = t("subjects.updated")
     end
     respond_with(@subject, :location => @subject)
   end

@@ -91,7 +91,7 @@ describe TeachersController do
     it "show success message" do
       teacher.stub(:save).and_return(true)
       post :create
-      expect(flash[:notice]).to eq("Teacher was successfully created.")
+      expect(flash[:notice]).to eq("Professor criado com sucesso.")
     end
   end
 
@@ -108,7 +108,7 @@ describe TeachersController do
     it "should success update message" do
       Teacher.stub(:update_attributes).and_return(true)
       put :update, :id => teacher.id
-      expect(flash[:notice]).to eq("Teacher was successfully updated.")
+      expect(flash[:notice]).to eq("Professor atualizado com sucesso.")
     end
   end
 

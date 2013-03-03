@@ -9,15 +9,23 @@ pt-BR:
   teachers:
     title: "Professores"
     editing: "Editando professor"
+    created: "Professor criado com sucesso."
+    updated: "Professor atualizado com sucesso."
   students:
     listing: "Alunos"
     editing: "Editando aluno"
+    created: "Aluno criado com sucesso."
+    updated: "Aluno atualizado com sucesso."
   subjects:
     listing: "Matérias"
     editing: "Editando matéria"
+    created: "Matéria criada com sucesso."
+    updated: "Matéria atualizada com sucesso."
   teams:
     listing: "Turmas"
     editing: "Editando turma"
+    created: "Turma criada com sucesso."
+    updated: "Turma atualizada com sucesso."
   activerecord:
     models:
       teacher: "Professor"

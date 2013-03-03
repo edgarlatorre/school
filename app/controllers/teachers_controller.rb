@@ -24,7 +24,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(params[:teacher])
 
     if @teacher.save
-      flash[:notice] = 'Teacher was successfully created.'
+      flash[:notice] = t("teachers.created")
     end
 
     respond_with(@teacher, :location => @teacher)
@@ -34,7 +34,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
 
     if @teacher.update_attributes(params[:teacher])
-      flash[:notice] = 'Teacher was successfully updated.'
+      flash[:notice] = t("teachers.updated")
     end
 
     respond_with(@teacher, :location => @teacher)

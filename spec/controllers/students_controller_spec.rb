@@ -91,7 +91,7 @@ describe StudentsController do
     it "show success message" do
       student.stub(:save).and_return(true)
       post :create
-      expect(flash[:notice]).to eq("Student was successfully created.")
+      expect(flash[:notice]).to eq("Aluno criado com sucesso.")
     end
   end
 
@@ -108,7 +108,7 @@ describe StudentsController do
     it "should success update message" do
       Student.stub(:update_attributes).and_return(true)
       put :update, :id => student.id
-      expect(flash[:notice]).to eq("Student was successfully updated.")
+      expect(flash[:notice]).to eq("Aluno atualizado com sucesso.")
     end
   end
 

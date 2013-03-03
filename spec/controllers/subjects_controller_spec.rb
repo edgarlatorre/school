@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'spec_helper'
 
 describe SubjectsController do
@@ -91,7 +92,7 @@ describe SubjectsController do
     it "show success message" do
       subject.stub(:save).and_return(true)
       post :create
-      expect(flash[:notice]).to eq("Subject was successfully created.")
+      expect(flash[:notice]).to eq("Matéria criada com sucesso.")
     end
   end
 
@@ -108,7 +109,7 @@ describe SubjectsController do
     it "should success update message" do
       Subject.stub(:update_attributes).and_return(true)
       put :update, :id => subject.id
-      expect(flash[:notice]).to eq("Subject was successfully updated.")
+      expect(flash[:notice]).to eq("Matéria atualizada com sucesso.")
     end
   end
 

@@ -91,7 +91,7 @@ describe TeamsController do
     it "show success message" do
       team.stub(:save).and_return(true)
       post :create
-      expect(flash[:notice]).to eq("Team was successfully created.")
+      expect(flash[:notice]).to eq("Turma criada com sucesso.")
     end
   end
 
@@ -108,7 +108,7 @@ describe TeamsController do
     it "should success update message" do
       Team.stub(:update_attributes).and_return(true)
       put :update, :id => team.id
-      expect(flash[:notice]).to eq("Team was successfully updated.")
+      expect(flash[:notice]).to eq("Turma atualizada com sucesso.")
     end
   end
 

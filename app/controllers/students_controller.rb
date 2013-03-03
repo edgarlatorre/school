@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
     @student = Student.new(params[:student])
 
     if @student.save
-      flash[:notice] = 'Student was successfully created.'
+      flash[:notice] = t('students.created')
     end
 
     respond_with(@student, :location => @student)
@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
 
     if @student.update_attributes(params[:student])
-      flash[:notice] = 'Student was successfully updated.'
+      flash[:notice] = t('students.updated')
     end
 
     respond_with(@student, :location => @student)
