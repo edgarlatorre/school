@@ -4,6 +4,7 @@
   <tr>
     <th><%= t("activerecord.attributes.student.name") %></th>
     <th><%= t("activerecord.attributes.student.age") %></th>
+    <th><%= t("activerecord.attributes.student.team") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= student.name %></td>
     <td><%= student.age %></td>
+    <td><%= student.team.name %></td>
     <td><%= link_to t('show'), student %></td>
     <td><%= link_to t('edit'), edit_student_path(student) %></td>
     <td><%= link_to t('destroy'), student, method: :delete, data: { confirm: t('are-you-sure') } %></td>

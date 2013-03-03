@@ -41,6 +41,7 @@ pt-BR:
       student:
         name: "Nome"
         age: "Idade"
+        team: "Turma"
       subject:
         name: "Nome"
         description: "Descrição"

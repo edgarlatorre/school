@@ -1,13 +1,8 @@
 School::Application.routes.draw do
+  root :to => 'students#index'
   resources :teams
-
-
   resources :subjects
-
-
   resources :students
-
-
   resources :teachers
 
 

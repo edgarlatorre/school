@@ -10,6 +10,10 @@
   <%= @student.age %>
 </p>
 
+<p>
+  <b><%= t("activerecord.attributes.student.team")%>:</b>
+  <%= @student.team.name %>
+</p>
 
 <%= link_to t('edit'), edit_student_path(@student) %> |
 <%= link_to t('back'), students_path %>
