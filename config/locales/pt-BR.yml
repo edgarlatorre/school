@@ -6,6 +6,7 @@ pt-BR:
   new: "Novo"
   destroy: "Remover"
   are-you-sure: "Você tem certeza?"
+  error: "Erro:"
   teachers:
     title: "Professores"
     editing: "Editando professor"
