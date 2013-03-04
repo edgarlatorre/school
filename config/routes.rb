@@ -1,4 +1,8 @@
 School::Application.routes.draw do
+  get "lessons/create"
+
+  get "lessons/destroy"
+
   root :to => 'students#index'
   resources :teams
   resources :subjects

@@ -33,6 +33,7 @@ pt-BR:
       student: "Aluno"
       subject: "Matéria"
       team: "Turma"
+      lesson: "Aula"
 
     attributes:
       teacher:
@@ -47,3 +48,6 @@ pt-BR:
         description: "Descrição"
       team:
         name: "Nome"
+      lesson:
+        teacher: "Professor"
+        subject: "Matéria"
