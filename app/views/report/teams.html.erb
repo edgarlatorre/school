@@ -1,0 +1,17 @@
+<h1>Relatório das <%= t("teams.listing") %></h1>
+<% @teams.each do |team| %>
+  <strong><%= team.name %></strong><br>
+  Alunos:
+  <ul>
+    <% team.students.each do |student| %>
+      <li><%= student.name %></li>
+    <% end %>
+  </ul>
+  Matéria e Professor:
+  <ul>
+    <% team.lessons.each do |lesson| %>
+      <li><%= lesson.subject.name %> - <%= lesson.teacher.name %></li>
+    <% end %>
+  </ul>
+  <hr>
+<% end %>

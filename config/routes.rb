@@ -1,4 +1,6 @@
 School::Application.routes.draw do
+  get "report/teams"
+
   root :to => 'students#index'
   resources :teams
   resources :subjects
