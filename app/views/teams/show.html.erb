@@ -5,6 +5,23 @@
   <%= @team.name %>
 </p>
 
-
 <%= link_to t('edit'), edit_team_path(@team) %> |
 <%= link_to t('back'), teams_path %>
+
+<h3> Aulas </h3>
+
+<table class="table">
+  <tr>
+    <th><%= t("activerecord.models.subject") %></th>
+    <th><%= t("activerecord.models.teacher") %></th>
+    <th></th>
+  </tr>
+
+<% @team.lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.subject.name %></td>
+    <td><%= lesson.teacher.name %></td>
+    <td><%= link_to t('destroy'), lesson, method: :delete, data: { confirm: t('are-you-sure') } %></td>
+  </tr>
+<% end %>
+</table>

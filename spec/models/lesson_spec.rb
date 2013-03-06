@@ -10,4 +10,9 @@ describe Lesson do
     lesson = Lesson.create
     expect(lesson).to have(1).error_on(:subject)
   end
+
+  it "should belongs to a team" do
+    lesson = Lesson.create
+    expect(lesson).to have(1).error_on(:team)
+  end
 end

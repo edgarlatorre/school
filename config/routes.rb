@@ -1,13 +1,10 @@
 School::Application.routes.draw do
-  get "lessons/create"
-
-  get "lessons/destroy"
-
   root :to => 'students#index'
   resources :teams
   resources :subjects
   resources :students
   resources :teachers
+  resources :lessons
 
 
   # The priority is based upon order of creation:

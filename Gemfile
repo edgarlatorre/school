@@ -21,8 +21,10 @@ end
 
 group :test do
   gem "capybara"
-  gem 'rb-fsevent', :require => false
+  gem 'rb-inotify', '~> 0.9'
   gem "guard-rspec"
+  gem "spork"
+  gem "guard-spork"
   gem "simplecov"
 end
 

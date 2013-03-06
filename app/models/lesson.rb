@@ -1,6 +1,7 @@
 class Lesson < ActiveRecord::Base
-  has_one :teacher
-  has_one :subject
+  attr_accessible :team_id, :teacher_id, :subject_id
   belongs_to :team
-  validates_presence_of :teacher, :subject
+  belongs_to :teacher
+  belongs_to :subject
+  validates_presence_of :team, :teacher, :subject
 end
