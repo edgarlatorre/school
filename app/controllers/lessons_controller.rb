@@ -25,6 +25,21 @@ class LessonsController < ApplicationController
     respond_with(@lesson, :location => @lesson)
   end
 
+  def edit
+    @lesson = Lesson.find(params[:id])
+    respond_with @lesson
+  end
+
+  def update
+    @lesson = Lesson.find(params[:id])
+
+    if @lesson.update_attributes(params[:lesson])
+      flash[:notice] = t('lessons.updated')
+    end
+
+    respond_with(@lesson, :location => @lesson)
+  end
+
   def destroy
     @lesson = Lesson.find(params[:id])
     @lesson.destroy

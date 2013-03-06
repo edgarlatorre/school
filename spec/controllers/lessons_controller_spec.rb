@@ -76,6 +76,23 @@ describe LessonsController do
     end
   end
 
+  describe "PUT 'update'" do
+    before(:each) do
+      Lesson.stub(:find).and_return(lesson)
+    end
+
+    it "updates lesson" do
+      lesson.should_receive(:update_attributes).and_return(true)
+      put :update, :id => lesson.id
+    end
+
+    it "should success update message" do
+      Lesson.stub(:update_attributes).and_return(true)
+      put :update, :id => lesson.id
+      expect(flash[:notice]).to eq("Aula atualizada com sucesso.")
+    end
+  end
+
   describe "DELETE 'destroy'" do
     before(:each) do
       Lesson.stub(:find).and_return(lesson)
