@@ -1,9 +1,28 @@
 class LessonsController < ApplicationController
-  respond_to :json
+  respond_to :html
+
+  def index
+    @lessons = Lesson.all
+    respond_with(@lessons)
+  end
+
+  def show
+    @lesson = Lesson.find(params[:id])
+    respond_with(@lesson)
+  end
+
+  def new
+    @lesson = Lesson.new
+    respond_with(@lesson)
+  end
+
   def create
     @lesson = Lesson.new(params[:lesson])
-    @lesson.save
-    respond_with @lesson
+    if @lesson.save
+      flash[:notice] = t('lessons.created')
+    end
+
+    respond_with(@lesson, :location => @lesson)
   end
 
   def destroy

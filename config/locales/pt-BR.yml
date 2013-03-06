@@ -28,6 +28,11 @@ pt-BR:
     editing: "Editando turma"
     created: "Turma criada com sucesso."
     updated: "Turma atualizada com sucesso."
+  lessons:
+    listing: "Aulas"
+    editing: "Editando aula"
+    created: "Aula criada com sucesso."
+    updated: "Aula atualizada com sucesso."
   activerecord:
     models:
       teacher: "Professor"
@@ -52,3 +57,4 @@ pt-BR:
       lesson:
         teacher: "Professor"
         subject: "Matéria"
+        team: "Turma"

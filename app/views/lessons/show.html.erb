@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= t("activerecord.attributes.lesson.subject")%>:</b>
+  <%= @lesson.subject.name %>
+</p>
+
+<p>
+  <b><%= t("activerecord.attributes.lesson.teacher")%>:</b>
+  <%= @lesson.teacher.name %>
+</p>
+
+<p>
+  <b><%= t("activerecord.attributes.lesson.team")%>:</b>
+  <%= @lesson.team.name %>
+</p>
+
+<%= link_to t('edit'), edit_lesson_path(@lesson) %> |
+<%= link_to t('back'), lessons_path %>

@@ -1,0 +1,27 @@
+<h1><%= t("lessons.listing") %></h1>
+
+<table class="table">
+  <tr>
+    <th><%= t("activerecord.attributes.lesson.subject") %></th>
+    <th><%= t("activerecord.attributes.lesson.teacher") %></th>
+    <th><%= t("activerecord.attributes.lesson.team") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.subject.name %></td>
+    <td><%= lesson.teacher.name %></td>
+    <td><%= lesson.team.name %></td>
+    <td><%= link_to t('show'), lesson %></td>
+    <td><%= link_to t('edit'), edit_lesson_path(lesson) %></td>
+    <td><%= link_to t('destroy'), lesson, method: :delete, data: { confirm: t('are-you-sure') } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to t('new'), new_lesson_path %>
