@@ -1,4 +1,13 @@
 <h1>Relatório das <%= t("teams.listing") %></h1>
+<p>Filtrar por: </p>
+<form class="form-inline">
+  <select name="filter">
+    <option value="teacher">Professor</option>
+    <option value="team">Turma</option>
+  </select>
+  <input name="name" type="text" placeholder="Nome">
+  <button type="submit">Filtrar</button>
+</form>
 <% @teams.each do |team| %>
   <strong><%= team.name %></strong><br>
   Alunos:

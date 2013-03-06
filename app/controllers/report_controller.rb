@@ -1,5 +1,6 @@
 class ReportController < ApplicationController
   def teams
-    @teams = Team.all
+    report = Report.new(params)
+    @teams = report.search_teams
   end
 end
